@@ -9,10 +9,12 @@ enter_book_title = input("Enter Book title: ")
 
 book_title = []
 book_price = []
+availability_list = []
 
 # Continues searching and adding items to the lists until the next page symbol(>) is no longer visible.
 while next_page_available:
 
+    # Normal URL: https://knigomania.bg/catalogsearch/result/?p=1&q=book+name+here
     URL = "https://knigomania.bg/catalogsearch/result/?p=" + str(page) + "&q=" + str(enter_book_title).replace(" ", "+")
 
     req = requests.get(URL)
@@ -22,8 +24,11 @@ while next_page_available:
     for element in soup.findAll(attrs={'class': 'item product product-item'}):
         name = element.find('a', attrs={'class': 'product-item-link'})
         price = element.find('span', attrs={'class': 'price-container price-final_price tax weee'})
+        availability = element.find('div', attrs={'class': 'actions-primary'})
         book_title.append(name.text)
         book_price.append(price.text)
+        availability_list.append(availability.text.replace("Купи", "Avaliable")
+                                 .replace("Няма наличност", "Not avaliable"))
 
     # Checks if the next page symbol(>) is no longer visible on the page.
     if soup.find("li", class_='item pages-item-next') is None:
@@ -32,5 +37,5 @@ while next_page_available:
     page += 1
 
 # Creates an Excel file containing all the books and prices that were scraped.
-df = pd.DataFrame({'Book Titles': book_title, 'Book Price': book_price})
+df = pd.DataFrame({'Book Titles': book_title, 'Book Price': book_price, 'Availability': availability_list})
 df.to_excel('KnigomaniaBooks.xlsx', index=False)
