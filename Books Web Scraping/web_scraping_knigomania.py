@@ -31,12 +31,6 @@ while next_page_available:
 
     page += 1
 
-# Prints the book names and prices in the console window.
-for names in book_title:
-    print(names)
-for prices in book_price:
-    print(prices)
-
 # Creates an Excel file containing all the books and prices that were scraped.
 df = pd.DataFrame({'Book Titles': book_title, 'Book Price': book_price})
 df.to_excel('KnigomaniaBooks.xlsx', index=False)
