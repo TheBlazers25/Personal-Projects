@@ -21,11 +21,11 @@ def dskFin(file, BILLS_NAMES):
             name = row[3]
             amount = float(row[9])
             category = 'other'
-            if name == "USA 4029357733 PAYPAL  HUMBLEBUNDL HU 16":
+            if name == "USA  PAYPAL  HUMBLEBUNDL HU 16":
                 category = "Humble Bundle"
             if name == "BGR PLOVDIV LIDL BALGARIYA EOOD BUL  BAL":
                 category = "Food"
-            if name == "DEU 4259855734 PAYPAL  STEAM GAMES Rodin":
+            if name == "DEU  PAYPAL  STEAM GAMES Rodin":
                 category = "Steam"
             if name == "BGR SLIVEN DASKALOVI FARMA EOOD":
                 category = "Pharmacy"
