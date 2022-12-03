@@ -2,7 +2,7 @@
 
 Simple web scraping project created with **Python**
 
-When a user enters a book title, the project looks up its price and availability in the [Knigomania](https://knigomania.bg) online bookstore website before scraping the information down to the final page and putting it into an Excel spreadsheet.
+When a user enters a book title, the project looks up its price and availability in the [Knigomania](https://knigomania.bg) online bookstore before scraping the information down to the final page and putting it into an Excel spreadsheet.
 
 # Libraries used:
 * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
