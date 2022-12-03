@@ -27,10 +27,6 @@ def dskFin(file, BILLS_NAMES):
                 category = "Food"
             if name == "DEU  PAYPAL  STEAM GAMES Rodin":
                 category = "Steam"
-            if name == "BGR SLIVEN DASKALOVI FARMA EOOD":
-                category = "Pharmacy"
-            if name == "BGR PLOVDIV ATM R DASKALOV 2 RAIKO DASKA":
-                category = "ATM"
             if name in BILLS_NAMES:
                 category = "Bills"
 
