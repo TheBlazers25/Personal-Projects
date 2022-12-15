@@ -10,7 +10,7 @@ df.columns =['Date', 'Name', 'Amount']
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="am336699bs",
+  password="pass",
   database="expenses"
 )
 
