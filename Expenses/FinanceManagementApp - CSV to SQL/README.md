@@ -8,3 +8,7 @@ This app reads a CSV file, creates a MySQL table, and adds only the date, descri
 # Libraries used:
 * [MySQL Connector](https://pypi.org/project/mysql-connector-python/)
 * [pandas](https://pandas.pydata.org)
+
+
+### TO-DO:
+* Fix dates
