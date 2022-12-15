@@ -2,7 +2,7 @@
 
 Simple finance management app created with **Python**
 
-This app reads a CSV file, creates a MySQL table, and adds the date, description and amount for all expenses.
+This app reads a CSV file, creates a MySQL table, and adds only the date, description and amount for all expenses.
 
 
 # Libraries used:
