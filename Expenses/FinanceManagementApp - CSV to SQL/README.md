@@ -10,5 +10,6 @@ This app reads a CSV file, creates a MySQL table, and adds only the date, descri
 * [pandas](https://pandas.pydata.org)
 
 
+<br>
 ### TO-DO:
 * Fix dates
