@@ -4,8 +4,8 @@ import numpy as np
 import pywinauto
 from PIL import ImageGrab
 
-def find_and_shoot_birds():
-    """ Captures screen, template matches birds and clicks the matched location """
+def find_color():
+    """ Captures screen, template matches color and clicks the matched location """
 
 
 screenTOP = 700
