@@ -4,7 +4,7 @@ from tkinter import *
 
 root = Tk()
 root.title('Digital Clock')
-root.geometry('350x250')
+root.geometry('350x100')
 
 
 def times():
